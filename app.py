@@ -5,6 +5,12 @@ next_id = 1
 @app.route("/")
 def home():
     return "Student Management System is Running!"
+@app.route("/about")
+def about():
+    return jsonify(
+        project="Student Management System",
+        version="1.0"
+    )
 @app.route("/health")
 def health():
     return jsonify(status="ok")
